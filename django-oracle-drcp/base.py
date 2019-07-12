@@ -1,4 +1,3 @@
-# pylint: disable=W0401
 import cx_Oracle
 from django.core.exceptions import ImproperlyConfigured
 from django.db.backends.oracle.base import DatabaseWrapper as DjDatabaseWrapper
@@ -19,6 +18,7 @@ class DatabaseWrapper(DjDatabaseWrapper):
             user=self.settings_dict["USER"],
             password=self.settings_dict["PASSWORD"],
             dsn=self.settings_dict["NAME"],
+            homogeneous=False,
             **pool_config
         )
 
