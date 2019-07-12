@@ -1,6 +1,6 @@
 # django-oracle-drcp
 
-A Django database backend for Oracle with DRCP.
+A Django database backend for Oracle with DRCP. Forked from JohnPapps/django-oracle-drcp.
 
 Developed against Oracle 11.2 with cx_Oracle 5.1.2 in Django 1.6 with Python 3.3 Tested again with
 cx_Oracle 5.2.1 with Oracle 11.2.0.4 in Django 1.9 with Python 3.4.2
