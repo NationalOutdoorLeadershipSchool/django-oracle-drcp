@@ -14,17 +14,16 @@ class DatabaseWrapper(DjDatabaseWrapper):
             )
         if not all(isinstance(val, int) for val in pool_config.values()):
             raise ImproperlyConfigured("POOL database option values must be numeric")
+
         self.pool = cx_Oracle.SessionPool(
             user=self.settings_dict["USER"],
             password=self.settings_dict["PASSWORD"],
             dsn=self.settings_dict["NAME"],
-            homogeneous=False,
             **pool_config
         )
 
     def get_new_connection(self, conn_params):
-        conn_params.update({"pool": self.pool})
-        return super(DatabaseWrapper, self).get_new_connection(conn_params)
+        return self.pool.acquire()
 
     def _close(self):
         if self.connection is not None:
