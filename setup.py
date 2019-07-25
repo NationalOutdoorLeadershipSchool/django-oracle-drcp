@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 
 setup(
-    name="django-oracle-drcp",
+    name="django-nols-drcp",
     packages=find_packages(),
     url="https://github.com/JohnPapps/django-oracle-drcp",
     version="1.0.3",
