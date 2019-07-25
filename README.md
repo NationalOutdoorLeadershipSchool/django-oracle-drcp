@@ -1,4 +1,4 @@
-# django-oracle-drcp
+# django-nols-drcp
 
 A Django database backend for Oracle with DRCP. Forked from JohnPapps/django-oracle-drcp.
 
