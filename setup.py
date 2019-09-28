@@ -6,7 +6,7 @@ setup(
     name="django-nols-drcp",
     packages=find_packages(),
     url="https://github.com/JohnPapps/django-oracle-drcp",
-    version="1.0.3",
+    version="1.0.4",
     description="A Django database backend for Oracle with DRCP",
     author="John Papanastasiou",
     author_email="s@johnpapps.com",
