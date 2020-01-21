@@ -8,7 +8,7 @@ cx_Oracle 5.2.1 with Oracle 11.2.0.4 in Django 1.9 with Python 3.4.2
 ## Configuration
 
 Ensure you have a tnsnames.ora entry augmented with SERVER=POOLED. Modify your database entry to
-reference the 'django-oracle-drcp' backend. Set 'NAME' to the name of the appropriate tns entry.
+reference the 'django-nols-drcp' backend. Set 'NAME' to the name of the appropriate tns entry.
 
 Configure DRCP options. Add an 'OPTIONS' entry to your database dict, and set it to a dict as
 follows:
@@ -21,7 +21,7 @@ follows:
 ```
 
 'purity' may be set to cx_Oracle.ATTR_PURITY_NEW (which means the session must be new without any
-priort session state) or cx_Oracle.ATTR_PURITY_SELF (meaning the session may have been used before).
+prior session state) or cx_Oracle.ATTR_PURITY_SELF (meaning the session may have been used before).
 You may also set 'purity' to cx_Oracle.ATTR_PURITY_DEFAULT for the default behaviour defined by
 Oracle.
 
@@ -53,7 +53,7 @@ import cx_Oracle
 
 databases = {
     'default': {
-        'ENGINE': 'django-oracle-drcp',
+        'ENGINE': 'django-nols-drcp',
         'NAME': 'my_drcp_db',
         'USER': 'my_db_user',
         'PASSWORD': 'my_password',
@@ -61,7 +61,7 @@ databases = {
         'PORT': '',
         'OPTIONS': {
             'purity': cx_Oracle.ATTR_PURITY_NEW,
-            'cclass': 'myappname',
+            'cclass': 'my-app-name',
         },
         'POOL': {
             'min': 1,

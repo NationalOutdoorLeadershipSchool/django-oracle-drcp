@@ -34,6 +34,10 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
+# IDEAs, editors, etc
+.idea/
+*.swp
+
 # Translations
 *.mo
 

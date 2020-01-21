@@ -4,7 +4,7 @@
 
 Django supports persistent connections per process as described in the
 [Databases](https://docs.djangoproject.com/en/1.9/ref/databases/) documentation. This may use a lot
-of memory depending on the application configuration, e.g. how many servers are in useand how many
+of memory depending on the application configuration, e.g. how many servers are in use and how many
 processes are permitted per server. However, this provides maximum performance while memory lasts.
 
 ## How does DRCP work?
@@ -50,8 +50,8 @@ The results are summarized below:
 | ------------------------------------ | ------------ | ----------------------- | --- | --- | --- | --- | --- | --- | --- | --- | ---- |
 | Connection per Request               | 35.36        | 226.215                 | 135 | 175 | 305 | 371 | 512 | 560 | 708 | 740 | 1210 |
 | Persistent Connection (CONN_MAX_AGE) | 156.32       | 51.178                  | 49  | 55  | 60  | 62  | 69  | 71  | 80  | 96  | 269  |
-| Connection Pool (django-oracle-drcp) | 139.44       | 57.371                  | 56  | 63  | 67  | 70  | 75  | 79  | 87  | 93  | 265  |
+| Connection Pool                      | 139.44       | 57.371                  | 56  | 63  | 67  | 70  | 75  | 79  | 87  | 93  | 265  |
 
-While your results may vary, the point of the numbers above is that Oracle DRCP and
-django-oracle-drcp add a minimal amount of overhead while also allowing multiple applications and
+While your results may vary, the point of the numbers above is that Oracle DRCP and this package
+add a minimal amount of overhead while also allowing multiple applications and
 application servers to share a pre-allocated number of connections.
