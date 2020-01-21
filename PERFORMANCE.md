@@ -52,6 +52,6 @@ The results are summarized below:
 | Persistent Connection (CONN_MAX_AGE) | 156.32       | 51.178                  | 49  | 55  | 60  | 62  | 69  | 71  | 80  | 96  | 269  |
 | Connection Pool                      | 139.44       | 57.371                  | 56  | 63  | 67  | 70  | 75  | 79  | 87  | 93  | 265  |
 
-While your results may vary, the point of the numbers above is that Oracle DRCP and this package
-add a minimal amount of overhead while also allowing multiple applications and
-application servers to share a pre-allocated number of connections.
+While your results may vary, the point of the numbers above is that Oracle DRCP and this package add
+a minimal amount of overhead while also allowing multiple applications and application servers to
+share a pre-allocated number of connections.
