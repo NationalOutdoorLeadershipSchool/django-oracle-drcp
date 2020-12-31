@@ -16,7 +16,7 @@ repos:
     hooks:
       - id: format-python
         types: [python]
-        language_version: python3.7
+        language_version: python3
 
   - repo: https://github.com/prettier/prettier
     rev: 1.16.2

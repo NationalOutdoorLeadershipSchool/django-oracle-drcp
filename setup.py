@@ -6,7 +6,7 @@ setup(
     name="django-nols-drcp",
     packages=find_packages(),
     url="https://github.com/NationalOutdoorLeadershipSchool/django-nols-drcp",
-    version="1.0.5",
+    version="1.0.6",
     description="A Django database backend for Oracle with DRCP",
     author="NOLS Developers",
     author_email="developer@nols.edu",
