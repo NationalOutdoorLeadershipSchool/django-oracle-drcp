@@ -33,7 +33,7 @@ repos:
           - --end-of-line=lf
 
   - repo: https://github.com/NationalOutdoorLeadershipSchool/format-code
-    rev: v1.2.0
+    rev: v1.2.2
     hooks:
       - id: format-python
         types: [python]
