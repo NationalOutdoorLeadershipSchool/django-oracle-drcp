@@ -6,7 +6,7 @@ from django.db.backends.oracle.base import DatabaseWrapper as DjDatabaseWrapper
 class DatabaseWrapper(DjDatabaseWrapper):
     def __init__(self, *args, **kwargs):
         super(DatabaseWrapper, self).__init__(*args, **kwargs)
-        default_pool = {"min": 20, "max": 50, "increment": 1}
+        default_pool = {"min": 1, "max": 2, "increment": 1}
         pool_config = self.settings_dict.get("POOL", default_pool)
         if set(pool_config.keys()) != {"min", "max", "increment"}:
             raise ImproperlyConfigured(
